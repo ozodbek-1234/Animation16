@@ -1,0 +1,619 @@
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #49e819;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+body {
+  background-color: #000;
+}
+
+.glowing-button-wrap {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+}
+
+.glowing-button {
+  white-space: nowrap;
+  margin: 10px;
+  position: relative;
+  background-color: #49e819;
+  box-shadow: 0 0 20px 0 #49e819;
+  border: 2px solid #49e819;
+  padding: 20px 80px;
+  background-color: #000;
+  transition: .4s;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
+  z-index: 0;
+}
+
+.glowing-button::before {
+  content: '';
+  width: 100%;
+  height: calc(50% + 1px);
+  background-color: #49e819;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+}
+
+.glowing-button::after {
+  content: '';
+  width: 100%;
+  height: calc(50% + 1px);
+  background-color: #49e819;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+}
+
+.glowing-button:hover {
+  color: #49e819;
+}
+
+.glowing-button:hover::before {
+  width: 30px;
+  height: 10px;
+  top: -5px;
+  left: -5px;
+  transform: skewX(30deg);
+  background-color: #000;
+}
+
+.glowing-button:hover::after {
+  width: 30px;
+  height: 10px;
+  bottom: -5px;
+  right: -5px;
+  transform: skewX(-30deg);
+  background-color: #000;
+}
+
+/* glowing button 2 */
+.glowing-button2 {
+  margin: 10px;
+  position: relative;
+  background-color: #49e819;
+  box-shadow: 0 0 20px 0 #49e819;
+  border: 2px solid #49e819;
+  padding: 20px 80px;
+  background-color: #000;
+  transition: .4s;
+  font-size: 20px;
+  cursor: pointer;
+  color: #49e819;
+  z-index: 0;
+}
+
+.glowing-button2::before {
+  content: '';
+  position: absolute;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  width: 30px;
+  height: 10px;
+  top: -5px;
+  left: -5px;
+  transform: skewX(30deg);
+  background-color: #000;
+}
+
+.glowing-button2::after {
+  content: '';
+  position: absolute;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  width: 30px;
+  height: 10px;
+  bottom: -5px;
+  right: -5px;
+  transform: skewX(-30deg);
+  background-color: #000;
+}
+
+.glowing-button2:hover {
+  color: #000;
+}
+
+.glowing-button2:hover::before {
+  width: 100%;
+  height: calc(50% + 1px);
+  left: 0;
+  top: 0;
+  transform: skewX(0deg);
+  background-color: #49e819;
+}
+
+.glowing-button2:hover::after {
+  width: 100%;
+  height: calc(50% + 1px);
+  right: 0;
+  bottom: 0;
+  background-color: #49e819;
+  transform: skewX(0deg);
+}
+
+/* glowing button 3 */
+.glowing-button3 {
+  margin: 10px;
+  position: relative;
+  background-color: #49e819;
+  box-shadow: 0 0 20px 0 #49e819;
+  border: 2px solid #49e819;
+  padding: 20px 80px;
+  background-color: #000;
+  transition: .4s;
+  font-size: 20px;
+  cursor: pointer;
+  color: #49e819;
+  z-index: 0;
+}
+
+.glowing-button3::before {
+  content: '';
+  width: 100%;
+  height: calc(50% + 1px);
+  background-color: #49e819;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  width: 30px;
+  height: 10px;
+  top: -5px;
+  left: -5px;
+  transform: skewX(30deg);
+  background-color: #000;
+}
+
+.glowing-button3::after {
+  content: '';
+  width: 100%;
+  height: calc(50% + 1px);
+  background-color: #49e819;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  width: 30px;
+  height: 10px;
+  bottom: -5px;
+  right: -5px;
+  transform: skewX(-30deg);
+  background-color: #000;
+}
+
+.glowing-button3:hover {
+  background-color: #49e819;
+  color: #000;
+}
+
+.glowing-button3:hover::before {
+  left: calc(100% - 25px);
+  transform: skewX(-30deg);
+}
+
+.glowing-button3:hover::after {
+  right: calc(100% - 25px);
+  transform: skewX(30deg);
+}
+
+/* glowing button 4 */
+.glowing-button4 {
+  margin: 10px;
+  position: relative;
+  background-color: #49e819;
+  box-shadow: 0 0 20px 0 #49e819;
+  border: 2px solid #49e819;
+  padding: 20px 80px;
+  background-color: #000;
+  transition: .4s;
+  font-size: 20px;
+  cursor: pointer;
+  color: #49e819;
+  z-index: 0;
+}
+
+.glowing-button4::before {
+  content: '';
+  width: 100%;
+  height: calc(50% + 1px);
+  background-color: #49e819;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  width: 30px;
+  height: 10px;
+  top: -5px;
+  left: -5px;
+  transform: skewX(30deg);
+  background-color: #000;
+}
+
+.glowing-button4::after {
+  content: '';
+  width: 100%;
+  height: calc(50% + 1px);
+  background-color: #49e819;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  width: 30px;
+  height: 10px;
+  bottom: -5px;
+  right: -5px;
+  transform: skewX(-30deg);
+  background-color: #000;
+}
+
+.glowing-button4:hover::before {
+  left: calc(100% - 25px);
+  transform: skewX(-30deg);
+}
+
+.glowing-button4:hover::after {
+  right: calc(100% - 25px);
+  transform: skewX(30deg);
+}
+
+/* glowing button 5 */
+.glowing-button5 {
+  margin: 10px;
+  position: relative;
+  background-color: #49e819;
+  box-shadow: 0 0 20px 0 #49e819;
+  border: 2px solid #49e819;
+  padding: 20px 80px;
+  background-color: #000;
+  transition: .4s;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
+  z-index: 0;
+}
+
+.glowing-button5:hover {
+  color: #49e819;
+}
+
+.glowing-button5::before {
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #49e819;
+}
+
+.glowing-button5::after {
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  background-color: #49e819;
+}
+
+.glowing-button5:hover::before {
+  top: -5px;
+  left: -5px;
+  transform: skewX(30deg);
+  height: 10px;
+  width: 30px;
+  background-color: #000;
+}
+
+.glowing-button5:hover::after {
+  bottom: -5px;
+  right: -5px;
+  transform: skewX(-30deg);
+  height: 10px;
+  width: 30px;
+  background-color: #000;
+}
+
+/* glowing button 6 */
+.glowing-button6 {
+  margin: 10px;
+  position: relative;
+  background-color: #49e819;
+  box-shadow: 0 0 20px 0 #49e819;
+  border: 2px solid #49e819;
+  padding: 20px 80px;
+  background-color: #000;
+  transition: .4s;
+  font-size: 20px;
+  cursor: pointer;
+  color: #49e819;
+  z-index: 0;
+}
+
+.glowing-button6::before {
+  content: '';
+  width: 100%;
+  height: calc(50% + 1px);
+  background-color: #49e819;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  width: 10px;
+  height: 10px;
+  top: -5px;
+  left: -5px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.glowing-button6::after {
+  content: '';
+  width: 100%;
+  height: calc(50% + 1px);
+  background-color: #49e819;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  width: 10px;
+  height: 10px;
+  bottom: -5px;
+  right: -5px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.glowing-button6:hover::before {
+  left: calc(100% - 5px);
+}
+
+.glowing-button6:hover::after {
+  right: calc(100% - 5px);
+}
+
+/* glowing button 7 */
+.glowing-button7 {
+  margin: 10px;
+  position: relative;
+  background-color: #49e819;
+  box-shadow: 0 0 20px 0 #49e819;
+  border: 2px solid #49e819;
+  padding: 20px 80px;
+  background-color: #000;
+  transition: .4s;
+  font-size: 20px;
+  cursor: pointer;
+  color: #49e819;
+  z-index: 0;
+}
+
+.glowing-button7::before {
+  content: '';
+  width: 100%;
+  height: calc(50% + 1px);
+  background-color: #49e819;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  width: 10px;
+  height: 10px;
+  top: -5px;
+  left: -5px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.glowing-button7::after {
+  content: '';
+  width: 100%;
+  height: calc(50% + 1px);
+  background-color: #49e819;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  width: 10px;
+  height: 10px;
+  bottom: -5px;
+  right: -5px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.glowing-button7:hover::before {
+  top: 58px;
+}
+
+.glowing-button7:hover::after {
+  bottom: 58px;
+}
+
+/* glowing button 8 */
+.glowing-button8 {
+  margin: 10px;
+  position: relative;
+  background-color: #49e819;
+  box-shadow: 0 0 20px 0 #49e819;
+  border: 2px solid #49e819;
+  padding: 20px 80px;
+  background-color: #000;
+  transition: .4s;
+  font-size: 20px;
+  cursor: pointer;
+  color: #49e819;
+  z-index: 0;
+}
+
+.glowing-button8::before {
+  content: '';
+  width: 100%;
+  background-color: #49e819;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  width: 10px;
+  height: calc(100% - 40px);
+  top: 50%;
+  transform: translateY(-50%);
+  left: -5px;
+  background-color: #000;
+}
+
+.glowing-button8::after {
+  content: '';
+  width: 100%;
+  background-color: #49e819;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  width: 10px;
+  height: calc(100% - 40px);
+  top: 50%;
+  transform: translateY(-50%);
+  right: -5px;
+  background-color: #000;
+}
+
+.glowing-button8:hover {
+  color: #000;
+}
+
+.glowing-button8:hover::before {
+  left: 0;
+  width: calc(50% + 1px);
+  background-color: #49e819;
+}
+
+.glowing-button8:hover::after {
+  right: 0;
+  width: calc(50% + 1px);
+  background-color: #49e819;
+}
+
+/* glowing button 9 */
+.glowing-button9 {
+  margin: 10px;
+  position: relative;
+  background-color: #49e819;
+  box-shadow: 0 0 20px 0 #49e819;
+  border: 2px solid #49e819;
+  padding: 20px 80px;
+  background-color: #000;
+  transition: .4s;
+  font-size: 20px;
+  cursor: pointer;
+  color: #49e819;
+  z-index: 0;
+}
+
+.glowing-button9::before {
+  content: '';
+  width: 100%;
+  background-color: #49e819;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  width: 10px;
+  height: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -5px;
+  background-color: #000;
+}
+
+.glowing-button9::after {
+  content: '';
+  width: 100%;
+  background-color: #49e819;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #49e819;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #49e819;
+  z-index: -1;
+  width: 10px;
+  height: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -5px;
+  background-color: #000;
+}
+
+.glowing-button9:hover::before {
+  height: 100%;
+}
+
+.glowing-button9:hover::after {
+  height: 100%;
+}
